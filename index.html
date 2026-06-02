@@ -16,7 +16,7 @@
   }
   body {
     font-family: -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-    background: #EEF2F0;
+    background: #EEF2F8;
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -24,14 +24,14 @@
   }
   .header {
     height: var(--header-h);
-    background: linear-gradient(135deg, #5B7C7E 0%, #7A9B9E 50%, #99B8B8 100%);
+    background: linear-gradient(135deg, #3A6EA8 0%, #5A8FC8 50%, #7AAEE0 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
     padding-top: env(safe-area-inset-top, 0px);
     flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(91,124,126,0.3);
+    box-shadow: 0 2px 8px rgba(58,110,168,0.3);
   }
   .header-title { color: white; font-size: 16px; font-weight: 600; letter-spacing: 0.03em; }
   .header-sub { color: rgba(255,255,255,0.85); font-size: 11px; margin-top: 2px; }
@@ -44,8 +44,8 @@
   }
   .btn-icon:hover { background: rgba(255,255,255,0.35); }
   .status-bar {
-    background: #F0F5F4; border-bottom: 1px solid #D0DEDD;
-    padding: 6px 16px; font-size: 11px; color: #5B7C7E;
+    background: #F0F4FA; border-bottom: 1px solid #C8D8EE;
+    padding: 6px 16px; font-size: 11px; color: #3A6EA8;
     display: flex; align-items: center; gap: 6px; flex-shrink: 0;
   }
   .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #4CAF50; flex-shrink: 0; }
@@ -54,19 +54,19 @@
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
   .template-wrap {
     height: var(--template-h); background: white;
-    border-bottom: 1px solid #D8E8E6;
+    border-bottom: 1px solid #C8D8EE;
     display: flex; align-items: center; padding: 0 12px; gap: 8px;
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     scrollbar-width: none; flex-shrink: 0;
   }
   .template-wrap::-webkit-scrollbar { display: none; }
   .template-btn {
-    white-space: nowrap; background: #EEF5F4;
-    border: 1.5px solid #A8C8C8; color: #5B7C7E;
+    white-space: nowrap; background: #EEF3FA;
+    border: 1.5px solid #90B8E0; color: #3A6EA8;
     font-size: 13px; padding: 7px 14px; border-radius: 20px;
     cursor: pointer; flex-shrink: 0; transition: all 0.18s; font-family: inherit;
   }
-  .template-btn:hover { background: #5B7C7E; color: white; border-color: #5B7C7E; }
+  .template-btn:hover { background: #3A6EA8; color: white; border-color: #3A6EA8; }
   .template-btn:active { transform: scale(0.96); }
   .chat-area {
     flex: 1; overflow-y: auto; padding: 16px 12px;
@@ -79,7 +79,7 @@
   .msg-row.user { flex-direction: row-reverse; }
   .avatar {
     width: 36px; height: 36px; border-radius: 50%;
-    background: linear-gradient(135deg, #5B7C7E, #99B8B8);
+    background: linear-gradient(135deg, #3A6EA8, #7AAEE0);
     display: flex; align-items: center; justify-content: center;
     font-size: 18px; flex-shrink: 0; margin-top: 2px;
   }
@@ -88,41 +88,41 @@
     font-size: 16px; line-height: 1.8; word-break: break-word;
   }
   .bubble.bot {
-    background: white; color: #1A2E2E;
+    background: white; color: #1A2A3E;
     border-radius: 4px 18px 18px 18px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   }
   .bubble.user {
-    background: linear-gradient(135deg, #5B7C7E, #7A9B9E);
+    background: linear-gradient(135deg, #3A6EA8, #5A8FC8);
     color: white; border-radius: 18px 4px 18px 18px;
   }
   .bubble.error { background: #FFF0F0; color: #C0392B; border: 1px solid #FFCCCC; font-size: 16px; }
   .bubble.warning { background: #FFF8E1; color: #E65100; border: 1px solid #FFE082; font-size: 16px; }
   .typing-indicator { display: flex; gap: 4px; align-items: center; padding: 12px 16px; }
   .typing-dot {
-    width: 8px; height: 8px; border-radius: 50%; background: #A8C8C8;
+    width: 8px; height: 8px; border-radius: 50%; background: #90B8E0;
     animation: bounce 1.2s infinite;
   }
   .typing-dot:nth-child(2) { animation-delay: 0.18s; }
   .typing-dot:nth-child(3) { animation-delay: 0.36s; }
   @keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-6px)} }
-  .date-divider { text-align: center; font-size: 12px; color: #8AA8A8; padding: 4px 0; }
+  .date-divider { text-align: center; font-size: 12px; color: #7898B8; padding: 4px 0; }
   .input-area {
-    background: white; border-top: 1px solid #D8E8E6;
+    background: white; border-top: 1px solid #C8D8EE;
     padding: 10px 12px; padding-bottom: calc(10px + var(--safe-bottom));
     display: flex; align-items: flex-end; gap: 8px; flex-shrink: 0;
   }
   .input-box {
     flex: 1; min-height: 44px; max-height: 120px;
-    background: #F4F8F7; border: 1.5px solid #C8E0DE; border-radius: 22px;
-    padding: 12px 16px; font-size: 16px; font-family: inherit; color: #1A2E2E;
+    background: #F0F5FA; border: 1.5px solid #B0CEE8; border-radius: 22px;
+    padding: 12px 16px; font-size: 16px; font-family: inherit; color: #1A2A3E;
     resize: none; outline: none; overflow-y: auto; line-height: 1.5; transition: border-color 0.2s;
   }
-  .input-box:focus { border-color: #5B7C7E; }
-  .input-box::placeholder { color: #90B0B0; }
+  .input-box:focus { border-color: #3A6EA8; }
+  .input-box::placeholder { color: #88A8C8; }
   .send-btn {
     width: 44px; height: 44px; border-radius: 50%;
-    background: linear-gradient(135deg, #5B7C7E, #7A9B9E);
+    background: linear-gradient(135deg, #3A6EA8, #5A8FC8);
     border: none; color: white; font-size: 18px; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     transition: all 0.2s; flex-shrink: 0;
@@ -169,18 +169,15 @@
 // ★ 設定（GASのウェブアプリURLに変更してください）
 // ============================================================
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbycoMuKhsQtskDMn7FcHXtnAHKkG8_Vp__jy-dNvyF8ZdZPRwSLjDiW9qN-7Y5ibpdq/exec';
-
 // ストレージキー
 const STORAGE_KEY_DOC  = 'community_doc_content';
 const STORAGE_KEY_CHAT = 'community_chat_history';
 const STORAGE_KEY_DATE = 'community_last_updated';
-
 // ★ ドキュメントはここに1度だけ読み込んでメモリで保持
 //    毎回GASに送らず、GAS側のキャッシュに任せる
 let docContent = '';
 let chatHistory = [];
 let isLoading = false;
-
 // ============================================================
 // 初期化
 // ============================================================
@@ -193,13 +190,11 @@ window.addEventListener('load', () => {
     document.getElementById('send-btn').disabled = val.length === 0 || isLoading;
   });
 });
-
 function setTodayLabel() {
   const now = new Date();
   document.getElementById('today-label').textContent =
     `${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日`;
 }
-
 // ============================================================
 // ドキュメント管理
 // ============================================================
@@ -213,7 +208,6 @@ function loadFromStorage() {
     fetchDocFromGAS();
   }
 }
-
 async function fetchDocFromGAS() {
   setStatus('loading', 'データを取得中...');
   document.getElementById('btn-update').disabled = true;
@@ -234,20 +228,17 @@ async function fetchDocFromGAS() {
     document.getElementById('btn-update').disabled = false;
   }
 }
-
 function updateData() {
   localStorage.removeItem(STORAGE_KEY_DOC);
   localStorage.removeItem(STORAGE_KEY_DATE);
   fetchDocFromGAS();
 }
-
 // ok / loading / error の3種類
 function setStatus(state, text) {
   const dot = document.getElementById('status-dot');
   dot.className = 'status-dot' + (state === 'loading' ? ' loading' : state === 'error' ? ' error' : '');
   document.getElementById('status-text').textContent = text;
 }
-
 // ============================================================
 // チャット表示
 // ============================================================
@@ -261,7 +252,6 @@ function showGreeting() {
   }
   scrollToBottom();
 }
-
 function resetChat() {
   if (!confirm('会話をリセットしますか？')) return;
   chatHistory = [];
@@ -271,17 +261,14 @@ function resetChat() {
   setTodayLabel();
   showGreeting();
 }
-
 function sendTemplate(text) {
   document.getElementById('input-box').value = text;
   autoResize(document.getElementById('input-box'));
   sendMessage();
 }
-
 function handleKey(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
 }
-
 // ============================================================
 // メッセージ送信（メイン処理）
 // ============================================================
@@ -292,19 +279,15 @@ async function sendMessage() {
   inputBox.value = '';
   autoResize(inputBox);
   document.getElementById('send-btn').disabled = true;
-
   appendBubble('user', text);
   chatHistory.push({ role: 'user', content: text });
   scrollToMessage('last-user');
-
   const typingId = showTyping();
   isLoading = true;
-
   try {
     // ★ リトライ付きでGASを呼び出す
     const reply = await callGASWithRetry();
     hideTyping(typingId);
-
     // rate_limitの場合は警告バブルで表示
     if (reply.isRateLimit) {
       appendBubble('warning', reply.message);
@@ -316,9 +299,7 @@ async function sendMessage() {
       if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
       localStorage.setItem(STORAGE_KEY_CHAT, JSON.stringify(chatHistory));
     }
-
     scrollToMessage('last-user');
-
   } catch (e) {
     hideTyping(typingId);
     appendBubble('error', 'エラーが発生しました。しばらくしてから再度お試しください。\n' + e.message);
@@ -330,14 +311,12 @@ async function sendMessage() {
       document.getElementById('input-box').value.trim().length === 0;
   }
 }
-
 // ============================================================
 // ★ GAS呼び出し（フロント側リトライ付き）
 //    429 / rate_limit が返った場合、最大2回まで再試行
 // ============================================================
 async function callGASWithRetry(maxRetries = 2) {
   let lastResult;
-
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     if (attempt > 0) {
       // リトライ前に待機（5秒 → 10秒）
@@ -345,21 +324,16 @@ async function callGASWithRetry(maxRetries = 2) {
       setStatus('loading', `混み合っています。${waitSec}秒後に再試行中... (${attempt}/${maxRetries})`);
       await sleep(waitSec * 1000);
     }
-
     const result = await callGAS();
-
     // 成功 or rate_limit以外のエラー → そのまま返す
     if (!result.isRateLimit) return result;
-
     lastResult = result;
     // rate_limitならリトライ
   }
-
   // 全リトライ失敗
   setStatus('ok', '');
   return lastResult;
 }
-
 // ============================================================
 // ★ GAS単体呼び出し
 //    ・docContentはGAS側キャッシュに任せるため送信しない
@@ -375,22 +349,16 @@ async function callGAS() {
       // ★ docContentをここで送らない → GAS側のキャッシュが使われる
     })
   });
-
   if (!response.ok) throw new Error(`GASエラー (${response.status})`);
-
   const data = await response.json();
-
   // GASからrate_limitエラーが返ってきた場合
   if (data.error === 'rate_limit') {
     return { isRateLimit: true, message: data.reply };
   }
-
   // その他エラー
   if (data.error) throw new Error(data.error);
-
   return { isRateLimit: false, message: data.reply };
 }
-
 // ============================================================
 // UI ヘルパー
 // ============================================================
@@ -410,7 +378,6 @@ function appendBubble(type, text) {
   row.appendChild(bubble);
   chatArea.appendChild(row);
 }
-
 function cleanMarkdown(text) {
   return text
     .replace(/#{1,6}\s/g, '')
@@ -421,7 +388,6 @@ function cleanMarkdown(text) {
     .replace(/^\s*\d+\.\s/gm, '・')
     .trim();
 }
-
 function showTyping() {
   const chatArea = document.getElementById('chat-area');
   const row = document.createElement('div');
@@ -440,10 +406,8 @@ function showTyping() {
   scrollToBottom();
   return id;
 }
-
 function hideTyping(id) { const el = document.getElementById(id); if (el) el.remove(); }
 function scrollToBottom() { const c = document.getElementById('chat-area'); c.scrollTop = c.scrollHeight; }
-
 function scrollToMessage(target) {
   const chatArea = document.getElementById('chat-area');
   if (target === 'last-user') {
@@ -455,13 +419,11 @@ function scrollToMessage(target) {
     }
   }
 }
-
 function autoResize(el) {
   el.style.height = 'auto';
   el.style.height = Math.min(el.scrollHeight, 120) + 'px';
   document.getElementById('send-btn').disabled = el.value.trim().length === 0 || isLoading;
 }
-
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 </script>
 </body>
